@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/**
+ * One palette, two modes.
+ *
+ * Neutrals are warm-tinted rather than pure black/white so the surfaces keep
+ * depth. There is exactly one accent (a burnt orange) and it is the same hue as
+ * the hot end of the temperature ramp in `lib/conditions.ts`, so the charts and
+ * the interface read as one system instead of two competing colour stories.
+ *
+ * Contrast: every foreground token below clears WCAG AA (4.5:1) against its own
+ * mode's --surface, except --ink-faint, which is reserved for non-essential
+ * chart axis marks and still clears 3.7:1.
+ *
+ * Radius rule: panels use --radius, chips and controls use --radius-sm. Nothing
+ * else introduces a third value.
+ */
+:root {
+  --surface: #f7f6f3;
+  --surface-raised: #fffdfa;
+  --ink: #17181b;
+  --ink-muted: #6b6d74;
+  --ink-faint: #7c7e85;
+  --line: rgb(23 24 27 / 0.1);
+  --line-strong: rgb(23 24 27 / 0.2);
+  --accent: #a8431a;
+  --accent-soft: rgb(168 67 26 / 0.12);
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0c0d10;
+    --surface-raised: #141519;
+    --ink: #f1f0ed;
+    --ink-muted: #8e9099;
+    --ink-faint: #74767e;
+    --line: rgb(255 255 255 / 0.09);
+    --line-strong: rgb(255 255 255 / 0.18);
+    --accent: #e07a3c;
+    --accent-soft: rgb(224 122 60 / 0.16);
+  }
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --radius-panel: var(--radius);
+  --radius-chip: var(--radius-sm);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Numerals must not jitter as values tick over. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Keyboard focus stays visible everywhere, including over the chart. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
