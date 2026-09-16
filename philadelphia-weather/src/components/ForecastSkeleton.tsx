@@ -1,8 +1,11 @@
 /**
  * Skeleton shaped like the real page, so the layout does not jump when the
  * forecast lands.
+ *
+ * This is the prerendered state: the static HTML ships with this markup, and
+ * the browser swaps in real readings once the Open-Meteo call returns.
  */
-export default function Loading() {
+export function ForecastSkeleton() {
   return (
     <main className="mx-auto min-h-[100dvh] w-full max-w-5xl animate-pulse px-5 py-12 md:px-8 md:py-20">
       <div className="flex justify-between gap-6">

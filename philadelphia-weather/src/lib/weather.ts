@@ -1,9 +1,9 @@
 /**
  * Open-Meteo forecast client.
  *
- * Open-Meteo is keyless for non-commercial use, so there is no secret to manage
- * and no client-side CORS dance: this runs on the server and the browser only
- * ever sees rendered HTML.
+ * Runs in the browser. Open-Meteo is keyless for non-commercial use and serves
+ * permissive CORS headers, so a static page can call it directly with nothing
+ * to proxy and no secret to leak.
  *
  * Docs: https://open-meteo.com/en/docs
  */
@@ -153,11 +153,7 @@ function currentHourIndex(hourly: string[], currentTime: string): number {
 }
 
 export async function getForecast(): Promise<Forecast> {
-  const response = await fetch(`${ENDPOINT}?${QUERY}`, {
-    // Open-Meteo updates roughly every 15 minutes; revalidating on that cadence
-    // keeps the page fast without serving stale conditions.
-    next: { revalidate: 900 },
-  });
+  const response = await fetch(`${ENDPOINT}?${QUERY}`);
 
   if (!response.ok) {
     throw new Error(

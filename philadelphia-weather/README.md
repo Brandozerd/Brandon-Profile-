@@ -2,6 +2,8 @@
 
 A single-screen weather app for Philadelphia, built with Next.js and Tailwind CSS.
 
+**Live site: https://brandozerd.github.io/philadelphia-weather/**
+
 Live forecast data comes from [Open-Meteo](https://open-meteo.com/), which is
 keyless for non-commercial use. There is nothing to configure and no API key to
 manage.
@@ -13,15 +15,19 @@ npm run dev
 
 ## How it works
 
-The page is a Server Component. It calls Open-Meteo once on the server, so the
-browser never makes a cross-origin request and no key is ever exposed. The
-response is cached for 15 minutes at the fetch layer, roughly matching how often
-the upstream model updates.
+The site is a fully static Next.js export (`output: "export"`), served as plain
+files from GitHub Pages. There is no server and nothing to run.
 
-The route renders per request (`dynamic = "force-dynamic"`) rather than being
-prerendered at build time. Statically generating it would bake a build-time
-network failure into the page and serve that error to every visitor until it
-revalidated.
+The forecast is fetched from the browser. Open-Meteo is keyless and sends
+permissive CORS headers, so a static page can call it directly with nothing to
+proxy and no secret to expose. The page refreshes itself every 15 minutes while
+open, and again whenever you switch back to the tab, so a window left open
+overnight is never showing yesterday's conditions.
+
+Every push to `main` rebuilds and redeploys through
+`.github/workflows/deploy.yml`. A project site lives under `/<repo>`, so the
+workflow passes that prefix to the build as `NEXT_PUBLIC_BASE_PATH`; it stays
+empty for local development.
 
 ## Notes on the design
 
@@ -48,12 +54,13 @@ revalidated.
 ## Layout
 
 ```
+.github/workflows/  Pages build and deploy
 src/
-  app/          page (server), layout, loading skeleton, tokens
-  components/   Now, HourlyCurve, SevenDay, Conditions, SunArc
-  lib/          Open-Meteo client, WMO code table, curve maths, formatters
+  app/              page, layout, design tokens
+  components/       Now, HourlyCurve, SevenDay, Conditions, SunArc, skeleton
+  lib/              Open-Meteo client, WMO code table, curve maths, formatters
 ```
 
 Timestamps arrive from Open-Meteo as Philadelphia wall-clock with no offset.
-`lib/format.ts` rebuilds them in UTC before formatting so the displayed time is
-correct regardless of the server's own timezone.
+`lib/format.ts` rebuilds them in UTC before formatting, so the page shows
+Philadelphia time whether you open it in Philadelphia, London, or Tokyo.

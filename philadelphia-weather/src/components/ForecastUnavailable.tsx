@@ -1,7 +1,13 @@
 import { CloudSlash } from "@phosphor-icons/react/dist/ssr";
 import { PHILADELPHIA } from "@/lib/weather";
 
-export function ForecastUnavailable({ reason }: { reason?: string }) {
+export function ForecastUnavailable({
+  reason,
+  onRetry,
+}: {
+  reason?: string;
+  onRetry?: () => void;
+}) {
   // Upstream error text is a debugging aid, not something to show a visitor.
   const showReason = reason && process.env.NODE_ENV !== "production";
 
@@ -14,8 +20,19 @@ export function ForecastUnavailable({ reason }: { reason?: string }) {
       <p className="mt-3 max-w-[55ch] text-ink-muted">
         The forecast service did not answer. Nothing here is cached from an
         earlier reading, so rather than show you a stale temperature, the page is
-        showing you nothing. Reload in a moment.
+        showing you nothing.
       </p>
+
+      {onRetry && (
+        <button
+          type="button"
+          onClick={onRetry}
+          className="mt-7 w-fit cursor-pointer rounded-chip border border-line-strong px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent active:translate-y-px"
+        >
+          Try again
+        </button>
+      )}
+
       {showReason && (
         <p className="mt-6 max-w-[55ch] border-t border-line pt-4 font-mono text-xs text-ink-faint">
           {reason}
