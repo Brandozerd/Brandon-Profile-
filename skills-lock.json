@@ -78,6 +78,90 @@
       "sourceType": "github",
       "skillPath": "skills/stitch-skill/SKILL.md",
       "computedHash": "13322f38406cd3abf16ba45e35bdc9b18002d0153a79b4612b97aefc65d5a335"
+    },
+    "market-research": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/market-research/SKILL.md",
+      "computedHash": "8cfc36dc8a93476d092115f3fc70c631dcab14fcd6e04371160fc4fb29547800"
+    },
+    "research-ops": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/research-ops/SKILL.md",
+      "computedHash": "114d0e5480ce3ad263316c639ce0c401396e1d9fbec3cf15b3c962ae16f376db"
+    },
+    "competitive-platform-analysis": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/competitive-platform-analysis/SKILL.md",
+      "computedHash": "9d868bf06258b7228dc9cd91fe8d0e5b3e2edfd0da5caba6366a188fc830826e"
+    },
+    "competitive-report-structure": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/competitive-report-structure/SKILL.md",
+      "computedHash": "316894ef4f7751ddb9defa6a9c71171e21489f4836047c1500e8102500cf6e9d"
+    },
+    "benchmark-methodology": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/benchmark-methodology/SKILL.md",
+      "computedHash": "f24585262b9c3e106dc27d45f75c4b965501680a16ff6dc5a9995a53322549df"
+    },
+    "investor-materials": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/investor-materials/SKILL.md",
+      "computedHash": "e2c8d64412e2af9a2def3144b3d1e32f0fd69c724f2d17615fcf5a9bfa5f01cc"
+    },
+    "product-lens": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/product-lens/SKILL.md",
+      "computedHash": "58b82c847304b0c4fbf456c1f4ae9205f3733e011f8cbdeed30687f111a098c6"
+    },
+    "orch-build-mvp": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/orch-build-mvp/SKILL.md",
+      "computedHash": "ab8591b1b9a2711be93a9690bcee95ff8486faa00522aa8c0847d0481f7f64d9"
+    },
+    "frontend-patterns": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-patterns/SKILL.md",
+      "computedHash": "a5b971eb9e74cd763c7e3308bfd888e0d9cf69f8b88477659889d77182479740"
+    },
+    "react-patterns": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/react-patterns/SKILL.md",
+      "computedHash": "f3208d44a5d553038c42e046cec4dc16e4a3d90a9dbf931f883a2e21919a64a9"
+    },
+    "nextjs-turbopack": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/nextjs-turbopack/SKILL.md",
+      "computedHash": "336034322d2022f47b097e55b5448cbc1e204c11f964910fa6fb3baeab06a474"
+    },
+    "deployment-patterns": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/deployment-patterns/SKILL.md",
+      "computedHash": "b864abd1954570c4a469b7e1deb897e57858d25db2fd98d035ff7bca4a15b9b6"
+    },
+    "frontend-slides": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-slides/SKILL.md",
+      "computedHash": "9d58ad7d4555a9d6ea1944a5084fd0428ee44276ac13ee8df02c1c4e63925291"
+    },
+    "python-patterns": {
+      "source": "affaan-m/ECC",
+      "sourceType": "github",
+      "skillPath": "skills/python-patterns/SKILL.md",
+      "computedHash": "103e0130dac33a49d26705fc5a2df804980fcab6a0138d65bc7f370a987d49f6"
     }
   }
 }
