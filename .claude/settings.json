@@ -5,9 +5,23 @@
         "source": "github",
         "repo": "ferdinandobons/startup-skill"
       }
+    },
+    "tokeneconomizer": {
+      "source": {
+        "source": "github",
+        "repo": "microsoft/TokenEconomizer"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "source": "github",
+        "repo": "thedotmack/claude-mem"
+      }
     }
   },
   "enabledPlugins": {
-    "startup@startup-skill": true
+    "startup@startup-skill": true,
+    "tokeneconomizer@tokeneconomizer": true,
+    "claude-mem@thedotmack": true
   }
 }
