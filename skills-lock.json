@@ -176,6 +176,12 @@
       "ref": "release/v3.8.53",
       "skillPath": "skills/ponytail/SKILL.md",
       "computedHash": "cb36c9f060acc1e03dcb530670da06c945eba32caecc839b2ecb943c29fa6c81"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f"
     }
   }
 }
