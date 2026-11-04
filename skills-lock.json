@@ -162,6 +162,20 @@
       "sourceType": "github",
       "skillPath": "skills/python-patterns/SKILL.md",
       "computedHash": "103e0130dac33a49d26705fc5a2df804980fcab6a0138d65bc7f370a987d49f6"
+    },
+    "graphify": {
+      "source": "Graphify-Labs/graphify",
+      "sourceType": "github",
+      "ref": "v8",
+      "skillPath": "graphify/skill.md",
+      "computedHash": "eb42b0a833a54544ddba0d66a31d0f11fc82e5d3f3700dac9a621b0f610b9441"
+    },
+    "ponytail": {
+      "source": "cheaper-inference/OmniRoute",
+      "sourceType": "github",
+      "ref": "release/v3.8.53",
+      "skillPath": "skills/ponytail/SKILL.md",
+      "computedHash": "cb36c9f060acc1e03dcb530670da06c945eba32caecc839b2ecb943c29fa6c81"
     }
   }
 }
