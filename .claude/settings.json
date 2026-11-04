@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "startup-skill": {
+      "source": {
+        "source": "github",
+        "repo": "ferdinandobons/startup-skill"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "startup@startup-skill": true
+  }
+}
